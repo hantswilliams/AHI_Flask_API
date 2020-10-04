@@ -12,8 +12,20 @@ patients = [
     },
     {
         'patient_id': 2,
-        'title': u'Thomas',
+        'firstname': u'Thomas',
         'lastname': u'Williams', 
+        'inpatient': False
+    },
+    {
+        'patient_id': 3,
+        'firstname': u'Kyle',
+        'lastname': u'Jones',
+        'inpatient': False
+    },
+        {
+        'patient_id': 4,
+        'firstname': u'Marie',
+        'lastname': u'Guiteirrez',
         'inpatient': False
     }
 ]
@@ -21,11 +33,13 @@ patients = [
 
 @app.route('/', methods=['GET'])
 def welcome():
-    return "Server AHI 1.0"
+    return "Server AHI 0.01"
 
-@app.route('/ahi/api/v1.0/patients', methods=['GET'])
-def get_tasks():
-    return jsonify({'patients': patients})
+
+
+@app.route('/patients', methods=['GET'])
+def get_patients():
+    return jsonify({'List of Patients V0.01': patients})
 
 if __name__ == '__main__':
     app.run(debug=True)
