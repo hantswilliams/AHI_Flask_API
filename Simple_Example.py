@@ -6,7 +6,7 @@ app = Flask(__name__)
 ## file lives, and then type the follow below and press enter: 
 ## python Simple_Example.py
 
-## This is an example of pushing a change to Hants's GitHub Repository
+## 222 this is the second change
 
 @app.route('/')
 def hello():
