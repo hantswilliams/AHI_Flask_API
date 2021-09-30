@@ -1,14 +1,21 @@
 import requests 
 
 
-testUrl = "http://localhost:5000/ahi/api/v1.0/add_patient"
+testUrl = "http://127.0.0.1:5000/ahi/api/v1.0/add_patient"
 
 patientTest = {
-        'patient_id': '222222',
-        'firstname': 'example2',
-        'lastname': 'example3',
+        'patient_id': '340000',
+        'firstname': 'example55',
+        'lastname': 'example66',
         'inpatient': True
     }
 
 apiRequest = requests.post(testUrl, json=patientTest)
 
+apiRequest.status_code
+
+
+
+testUrl = "http://127.0.0.1:5000/ahi/api/v1.0/patients"
+apiRequest = requests.get(testUrl)
+print(apiRequest.text)

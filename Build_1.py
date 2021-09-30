@@ -1,4 +1,5 @@
 from flask import Flask
+
 app = Flask(__name__)
 
 
@@ -8,9 +9,10 @@ app = Flask(__name__)
 
 ## 222 this is the second change
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def hello():
-    return "Hello 😀!"
+    return "Hello 😀😀😀😀😀😀! heeyyyyyyy"
+
 
 if __name__ == '__main__':
     app.run(debug=True)

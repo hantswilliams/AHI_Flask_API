@@ -27,6 +27,18 @@ patients = [
         'firstname': u'Marie',
         'lastname': u'Guiteirrez',
         'inpatient': False
+    },
+        {
+        'patient_id': 5,
+        'firstname': u'Amanda',
+        'lastname': u'Power',
+        'inpatient': True
+    },
+        {
+        'patient_id': 6,
+        'firstname': u'Manleen',
+        'lastname': u'Chhabra',
+        'inpatient': True
     }
 ]
 
@@ -38,8 +50,8 @@ def welcome():
 
 
 @app.route('/patients', methods=['GET'])
-def get_patients():
-    return jsonify({'List of Patients V0.01': patients})
+def patientsEMR():
+    return jsonify(patients)
 
 if __name__ == '__main__':
     app.run(debug=True)
